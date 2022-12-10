@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e91bdf3-e0fe-4645-a277-15fe2f5bc932" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/Day_9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/src/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day_9/src/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Coordinate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Scanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2021/Puzzles/Day_19/src/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
