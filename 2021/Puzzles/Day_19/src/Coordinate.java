@@ -19,10 +19,10 @@ public class Coordinate {
         this.z = other.getZ();
     }
 
-    public Coordinate(Coordinate other, String order) {
+    public Coordinate(Coordinate other, String orientation) {
         this(other);
         Pattern coordinatePattern = Pattern.compile("(-?\\w),(-?\\w),(-?\\w)");
-        Matcher matcher = coordinatePattern.matcher(order);
+        Matcher matcher = coordinatePattern.matcher(orientation);
 
         if (matcher.matches()) {
             String x = matcher.group(1);
