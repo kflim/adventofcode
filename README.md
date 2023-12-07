@@ -1,4 +1,4 @@
-# AdventOfCode
+## AdventOfCode
 
 This repository hosts the completed tasks for Advent Of Code.
 
@@ -6,7 +6,11 @@ Advent of Code is an annual set of Christmas-themed computer programming challen
 
 Each year, I will learn new languages and complete tasks using those languages.
 
-# Languages used per year
+## Languages used per year
 2021 - Java\
 2022 - Java/PythonC++\
 2023 - Golang
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.

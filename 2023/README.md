@@ -21,7 +21,3 @@ This repository contains my solutions for the Advent of Code 2023, written in Go
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
