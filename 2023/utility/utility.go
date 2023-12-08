@@ -87,3 +87,22 @@ func ReduceToSuffixOfAnyKey(s string, m map[string]int) string {
 	}
 	return ""
 }
+
+func Create2DStrArray(lines []string) [][]string {
+	grid := make([][]string, len(lines))
+	for i, line := range lines {
+		grid[i] = strings.Split(line, "")
+	}
+	return grid
+}
+
+func ValueExistsInMapArray(m map[string][]int, key string, value int) bool {
+	if arr, ok := m[key]; ok {
+		for _, v := range arr {
+			if v == value {
+				return true
+			}
+		}
+	}
+	return false
+}
