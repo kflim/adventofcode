@@ -15,7 +15,7 @@ func main() {
 	log.SetFlags(0)
 
 	if len(os.Args) < 2 {
-		log.Fatal("Missing filepath argument. Usage: go run day1.go <filepath>")
+		log.Fatal("Missing filepath argument. Usage: go run day3.go <filepath>")
 	}
 
 	filepath := os.Args[1]

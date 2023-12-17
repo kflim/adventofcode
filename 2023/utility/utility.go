@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -27,6 +28,26 @@ func parseTextFile(filepath string) ([]string, error) {
 	}
 
 	return lines, nil
+}
+
+func GetFileContent(filepath string) string {
+	file, err := os.Open(filepath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	var content string
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		content += scanner.Text() + "\n"
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
+	return content
 }
 
 // GetLines reads a text file from the specified filepath and returns its content as a slice of strings.
@@ -88,6 +109,10 @@ func ReduceToSuffixOfAnyKey(s string, m map[string]int) string {
 	return ""
 }
 
+// Create2DStrArray takes a slice of strings and returns a 2D slice of strings.
+// Each string in the input slice is split into individual characters and stored in the resulting 2D slice.
+// The input slice represents the rows of the 2D slice.
+// The returned 2D slice represents a grid of strings.
 func Create2DStrArray(lines []string) [][]string {
 	grid := make([][]string, len(lines))
 	for i, line := range lines {
@@ -96,6 +121,9 @@ func Create2DStrArray(lines []string) [][]string {
 	return grid
 }
 
+// ValueExistsInMapArray checks if a given value exists in the array associated with a specific key in a map.
+// It takes a map m, a key string, and a value int as parameters.
+// It returns true if the value exists in the array, and false otherwise.
 func ValueExistsInMapArray(m map[string][]int, key string, value int) bool {
 	if arr, ok := m[key]; ok {
 		for _, v := range arr {
@@ -105,4 +133,55 @@ func ValueExistsInMapArray(m map[string][]int, key string, value int) bool {
 		}
 	}
 	return false
+}
+
+// ConvertAsciiToInt converts a string representation of an ASCII value to an integer.
+// It returns the converted integer value.
+func ConvertAsciiToInt(ascii string) int {
+	res, err := strconv.Atoi(ascii)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return res
+}
+
+// ConvertIntToAscii converts an integer to its corresponding ASCII character.
+func ConvertIntToAscii(num int) string {
+	return strconv.Itoa(num)
+}
+
+// SplitStringByColon splits a string by colon and returns a slice of strings.
+// It takes a string as input and uses the strings.Split function to split the string by colon.
+// The resulting substrings are returned as a slice of strings.
+func SplitStringByColon(s string) []string {
+	return strings.Split(s, ":")
+}
+
+// SplitStringSeparatedByWhitespace splits a string into a slice of substrings separated by whitespace.
+// It takes a string as input and returns a slice of strings.
+func SplitStringSeparatedByWhitespace(s string) []string {
+	return strings.Split(s, " ")
+}
+
+// GetSeparatedNumbersAfterColon takes a string as input and returns a slice of integers.
+// It expects the input string to be in the format "key: value1 value2 value3 ...",
+// where the values are separated by whitespace after the colon.
+// The function extracts the values after the colon, splits them by whitespace,
+// converts each value from ASCII to integer, and returns the resulting slice of integers.
+func GetSeparatedNumbersAfterColon(line string) []int {
+	nums := SplitStringSeparatedByWhitespace(strings.TrimSpace(SplitStringByColon(line)[1]))
+
+	var res []int
+
+	for _, time := range nums {
+		trimmedTime := strings.TrimSpace(time)
+		if trimmedTime != "" {
+			num := ConvertAsciiToInt(trimmedTime)
+			res = append(res, num)
+		}
+	}
+
+	return res
 }
