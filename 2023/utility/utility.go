@@ -30,6 +30,8 @@ func parseTextFile(filepath string) ([]string, error) {
 	return lines, nil
 }
 
+// GetFileContent reads the content of a file specified by the filepath parameter and returns it as a string.
+// If the file cannot be opened or read, it will log a fatal error.
 func GetFileContent(filepath string) string {
 	file, err := os.Open(filepath)
 	if err != nil {
@@ -184,4 +186,14 @@ func GetSeparatedNumbersAfterColon(line string) []int {
 	}
 
 	return res
+}
+
+// ArrayToIndiceMap converts an array of strings into a map where the keys are the elements of the array
+// and the values are the corresponding indices of the elements in the array.
+func ArrayToIndiceMap(arr []string) map[string]int {
+	m := make(map[string]int)
+	for index, value := range arr {
+		m[value] = index
+	}
+	return m
 }
