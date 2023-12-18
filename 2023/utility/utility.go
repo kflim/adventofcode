@@ -3,6 +3,7 @@ package utility
 import (
 	"bufio"
 	"log"
+	"math/big"
 	"os"
 	"strconv"
 	"strings"
@@ -196,4 +197,29 @@ func ArrayToIndiceMap(arr []string) map[string]int {
 		m[value] = index
 	}
 	return m
+}
+
+func GCD(a, b int64) int64 {
+	return new(big.Int).GCD(nil, nil, big.NewInt(a), big.NewInt(b)).Int64()
+}
+
+func LCM(a, b int64) int64 {
+	return a / GCD(a, b) * b
+}
+
+// LCMArray calculates the least common multiple (LCM) of an array of integers.
+// It takes an array of int64 as input and returns the LCM as an int64.
+func LCMArray(arr []int64) int64 {
+	if len(arr) == 0 {
+		return 0
+	}
+	if len(arr) == 1 {
+		return arr[0]
+	}
+
+	result := arr[0]
+	for _, num := range arr[1:] {
+		result = LCM(result, num)
+	}
+	return result
 }
