@@ -223,3 +223,15 @@ func LCMArray(arr []int64) int64 {
 	}
 	return result
 }
+
+// IsAllZeroes checks if all elements in the given slice are zero.
+// It returns true if all elements are zero, otherwise false.
+func IsAllZeroes(row []int) bool {
+	for _, value := range row {
+		if value != 0 {
+			return false
+		}
+	}
+
+	return true
+}
