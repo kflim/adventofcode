@@ -2,9 +2,6 @@
 
 input_file="input.txt"
 
-word="XMAS"
-word_length=${#word}
-
 # Check if the file exists
 if [ ! -f "$input_file" ]; then
     echo "Error: File $input_file not found!"
@@ -16,6 +13,9 @@ mapfile -t grid < "$input_file"
 
 rows=${#grid[@]}
 cols=${#grid[0]}
+
+word="XMAS"
+word_length=${#word}
 
 check_direction() {
     local r=$1 c=$2 dr=$3 dc=$4
